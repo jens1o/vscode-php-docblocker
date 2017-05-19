@@ -68,6 +68,10 @@ export default class FunctionBlock extends Block
             return 'boolean';
         }
 
+        if (/^get/.test(name)) {
+            return 'mixed';
+        }
+
         switch (name) {
             case '__construct':
             case '__destruct':
